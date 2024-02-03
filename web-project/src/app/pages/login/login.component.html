@@ -2,7 +2,8 @@
   <div class="login-container">
     <div class="title-cont" style="display: flex; flex-direction: column; margin-bottom: 15px">
       <p style="font-size: 32px; margin-bottom: 15px;">Bem vindo ao blog Sólides!</p>
-      <p style="font-size: 26px;">Login:</p>
+      <p *ngIf="!isRegister" style="font-size: 26px;">Login:</p>
+      <p *ngIf="isRegister" style="font-size: 26px;">Registrar:</p>
     </div>
     <form (ngSubmit)="loginOrRegiste()" #loginForm="ngForm">
       <div class="form-group" *ngIf="isRegister">
