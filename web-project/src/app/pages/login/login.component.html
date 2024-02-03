@@ -1,0 +1,33 @@
+<div class="login-all-container">
+  <div class="login-container">
+    <div class="title-cont" style="display: flex; flex-direction: column; margin-bottom: 15px">
+      <p style="font-size: 32px; margin-bottom: 15px;">Bem vindo ao blog Sólides!</p>
+      <p *ngIf="!isRegister" style="font-size: 26px;">Login:</p>
+      <p *ngIf="isRegister" style="font-size: 26px;">Registrar:</p>
+    </div>
+    <form (ngSubmit)="loginOrRegiste()" #loginForm="ngForm">
+      <div class="form-group" *ngIf="isRegister">
+        <label for="email">Nome:</label>
+        <input type="email" id="email" name="email" [(ngModel)]="loginInfos.name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" [(ngModel)]="loginInfos.email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Senha: </label>
+        <div style="display: flex; justify-content: space-between;">
+          <input style="width: 87%;" [type]="showPassword ? 'text' : 'password'" id="password" name="password" [(ngModel)]="loginInfos.password" required>
+          <mat-icon style="cursor: pointer; width: 10%;" (click)="togglePassword()" *ngIf="showPassword" class="mat-18">visibility</mat-icon>
+          <mat-icon style="cursor: pointer; width: 10%;" (click)="togglePassword()" *ngIf="!showPassword" class="mat-18">visibility_off</mat-icon>
+        </div>
+      </div>
+      <div *ngIf="!isRegister" style="width: 100%; display: flex; align-items: center; justify-content: center;"><button type="submit">Logar</button></div>
+      <div *ngIf="isRegister" style="width: 100%; display: flex; align-items: center; justify-content: center;"><button type="submit">Registrar</button></div>
+      <div style="display: flex; margin-top: 5px; justify-content: center;">
+        <p *ngIf="!isRegister" style="margin-right: 3px;">Não possui uma conta?</p><p (click)="toggleLoginRegiste()" *ngIf="!isRegister" style="font-weight: bolder; cursor: pointer;">Clique Aqui.</p>
+        <p *ngIf="isRegister" style="margin-right: 3px;">Possui uma conta?</p><p (click)="toggleLoginRegiste()" *ngIf="isRegister" style="font-weight: bolder; cursor: pointer;">Clique Aqui.</p>
+      </div>
+    </form>
+  </div>
+</div>
