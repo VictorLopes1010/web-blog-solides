@@ -1,0 +1,22 @@
+<form (ngSubmit)="addUser()" #loginForm="ngForm">
+  <div class="form-group">
+    <label for="email">Nome:</label>
+    <input type="email" id="email" name="email" [(ngModel)]="userInfos.name" required>
+  </div>
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" [(ngModel)]="userInfos.email" required>
+  </div>
+  <div class="form-group">
+    <label for="password">Senha: </label>
+    <div style="display: flex; justify-content: space-between;">
+      <input style="width: 87%;" [type]="showPassword ? 'text' : 'password'" id="password" name="password" [(ngModel)]="userInfos.password" required>
+      <mat-icon style="cursor: pointer; width: 10%;" (click)="togglePassword()" *ngIf="showPassword" class="mat-18">visibility</mat-icon>
+      <mat-icon style="cursor: pointer; width: 10%;" (click)="togglePassword()" *ngIf="!showPassword" class="mat-18">visibility_off</mat-icon>
+    </div>
+  </div>
+  <div style="display: flex; justify-content: flex-start;">
+    <button style="margin-right: 10px; background-color: #4caf50;" type="submit">Salvar</button>
+    <button style="background-color: red;" type="submit" (click)="cancelCreation()">Cancelar</button>
+  </div>
+</form>

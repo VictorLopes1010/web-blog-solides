@@ -6,7 +6,9 @@
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
 }
-
+.page{
+  padding: 25px;
+}
 
 
 html, body { height: 100%; }

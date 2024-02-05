@@ -20,4 +20,10 @@ export class UserService{
   register(loginRegisterModel: LoginRegisterModel): Observable<any>{
     return this.http.post(`${this.baseUrl}user/register`, loginRegisterModel)
   }
+
+  searchUsers(): Observable<any>{
+    const token = localStorage.getItem('token');
+    const headers = token ? new HttpHeaders({ 'Authorization': `Bearer ${token}` }) : undefined;
+    return this.http.get(`${this.baseUrl}user`, { headers });
+  }
 }

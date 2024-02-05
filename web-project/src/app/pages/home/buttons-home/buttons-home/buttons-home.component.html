@@ -1,0 +1,24 @@
+
+<div>
+  <div style="display: flex; gap: 1em;">
+    <div class="buttons-nav" [class.active]="selectedTab === 'posts'" (click)="selectTab('posts')">
+      <div class="button-info">
+        <mat-icon>post_add</mat-icon>
+        <p>Posts</p>
+      </div>
+    </div>
+    <div class="buttons-nav" [class.active]="selectedTab === 'albums'" (click)="selectTab('albums')">
+      <div class="button-info">
+        <mat-icon>photo_library</mat-icon>
+        <p>Albuns</p>
+      </div>
+    </div>
+    <div class="buttons-nav" [class.active]="selectedTab === 'users'" (click)="selectTab('users')">
+      <div class="button-info">
+        <mat-icon>person_add</mat-icon>
+        <p>Usuários</p>
+      </div>
+    </div>
+  </div>
+</div>
+
