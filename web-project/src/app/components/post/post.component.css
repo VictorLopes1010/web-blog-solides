@@ -1,0 +1,7 @@
+.btn-add{
+  background: transparent;
+  padding: 5px;
+  border: 1px purple solid;
+  border-radius: 5px;
+  cursor: pointer;
+}

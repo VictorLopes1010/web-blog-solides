@@ -1,1 +1,13 @@
-<p>home works!</p>
+<div class="page">
+  <div class="sub-title-page">
+    <p>Blog - Sólides</p>
+    <mat-icon style="cursor: pointer;" (click)="logout()">logout</mat-icon>
+  </div>
+  <app-buttons-home (selectedRoutine)="showSelectedRoutine($event)"></app-buttons-home>
+  <div class="routines-cont">
+    <app-album *ngIf="showAlbum"></app-album>
+    <app-post *ngIf="showPost"></app-post>
+    <app-user *ngIf="showUser"></app-user>
+  </div>
+</div>
+

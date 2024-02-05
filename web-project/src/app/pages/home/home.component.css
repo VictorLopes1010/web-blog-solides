@@ -1,0 +1,12 @@
+.sub-title-page{
+  margin-bottom: 15px;
+  border-bottom: 1px black solid;
+  padding-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.routines-cont{
+  margin-top: 15px;
+  border-top: black 1px solid;
+  padding-top: 15px;
+}

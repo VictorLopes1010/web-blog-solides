@@ -1,0 +1,14 @@
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  width: 40%;
+}
+button {
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100px;
+}
